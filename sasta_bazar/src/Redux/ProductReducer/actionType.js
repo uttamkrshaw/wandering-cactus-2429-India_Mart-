@@ -1,0 +1,9 @@
+export const GET_DATA_REQUEST = "GET_DATA_REQUEST";
+export const GET_MENS_DATA_SUCESS = "GET_MENS_DATA_SUCESS";
+export const GET_DATA_ERROR = "GET_DATA_ERROR";
+//womens
+export const GET_WOMENS_DATA_SUCESS = "GET_WOMENS_DATA_SUCESS";
+//mobile accessories
+export const GET_MOBILE_DATA_SUCESS = "GET_MOBILE_DATA_SUCESS";
+//all data
+export const GET_ALL_DATA_SUCESS = "GET_ALL_DATA_SUCESS";
