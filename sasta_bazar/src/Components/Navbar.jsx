@@ -25,29 +25,35 @@ import {
   ModalBody,
   ModalCloseButton,
   Text,
+  useToast
 } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 import logo from "../Images/logo.png"
-import user from "../Images/user.png"
 import { useDispatch, useSelector } from "react-redux";
-
-import { store } from "../Redux/store";
+import { useNavigate } from "react-router-dom";
 import { logout } from "../Redux/AuthReducer/action.js"
 
 function Navbar() {
   const dispatch = useDispatch()
+  const Toast = useToast()
+  const navigate = useNavigate()
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   const user = useSelector((store) => store.AuthReducer.user)
   const isAuth = useSelector((store) => store.AuthReducer.isAuth)
 
-  // console.log("Auth", isAuth);
-  // console.log("user", user)
-
   const handleLogout = () => {
-    dispatch(logout)
+    dispatch(logout);
+    navigate("/");
+    Toast({
+      title: 'Logout Successful.',
+      status: 'success',
+      duration: 3000,
+      isClosable: true,
+    })
   }
   useEffect(() => {
   }, [isAuth])
@@ -111,10 +117,10 @@ function Navbar() {
                   {user.type === "admin" ?
                     <Link to={"/admin"}>
                       <MenuItem>
-                      <Button variant="link">
-                      Admin Pannel
-                      </Button>
-                        
+                        <Button variant="link">
+                          Admin Pannel
+                        </Button>
+
                       </MenuItem>
                     </Link>
                     : null}

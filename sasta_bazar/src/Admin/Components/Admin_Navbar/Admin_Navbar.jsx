@@ -13,14 +13,12 @@ import {
   MenuDivider,
   useDisclosure,
   useColorModeValue,
-  Stack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Center, Image, Heading, Text, Link
+  Stack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Center, Image, Heading, Text, Link, Toast, useToast
 } from '@chakra-ui/react';
 // import { Link } from "react-router-dom";
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import { redirect } from "react-router-dom";
-import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { store } from '../../../Redux/store';
+import { useNavigate } from 'react-router-dom';
 import { logout } from "../../../Redux/AuthReducer/action.js"
 const Links = [{ name: 'Dashboard', to: "/admin" }, { name: 'Add_Products', to: "/admin_add_product" }, { name: 'User_List', to: "/admin_user_list" }, { name: 'Product_List', to: "/admin_product_list" }];
 const NavLink = ({ children }) => (
@@ -39,10 +37,19 @@ const NavLink = ({ children }) => (
 
 export default function Admin_Navbar() {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const Toast = useToast()
   const { isOpen, onOpen, onClose } = useDisclosure();
   const user = useSelector((store) => store.AuthReducer.user)
   const handleLogout = () => {
-    dispatch(logout)
+    dispatch(logout);
+    navigate("/");
+    Toast({
+      title: 'Logout Successful',
+      status: 'success',
+      duration: 2000,
+      isClosable: true,
+    })
   }
   return (
     <>

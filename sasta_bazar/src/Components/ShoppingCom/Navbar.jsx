@@ -18,6 +18,7 @@ import {
   InputLeftAddon,
   InputRightAddon,
   Icon,
+  useToast
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
@@ -28,6 +29,7 @@ import { getAllData } from "../../Redux/ProductReducer/action";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../Redux/AuthReducer/action";
 const Navbar = () => {
+  const Toast = useToast()
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((store) => store.AuthReducer.user)
@@ -38,8 +40,14 @@ const Navbar = () => {
     navigate("/searchdata");
   };
   const handleLogout = () => {
-    dispatch(logout)
-    navigate("/")
+    dispatch(logout);
+    navigate("/");
+    Toast({
+      title: 'Logout Successful.',
+      status: 'success',
+      duration: 3000,
+      isClosable: true,
+    })
   }
 
   const handleLogin = () => {
@@ -48,7 +56,7 @@ const Navbar = () => {
   const handleHome = () => {
     navigate("/")
   }
-  const handleAdmin = () =>{
+  const handleAdmin = () => {
     navigate("/admin")
   }
   return (
