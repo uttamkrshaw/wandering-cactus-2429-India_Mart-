@@ -14,7 +14,7 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Center, Image, Heading, Text, Link
-} from '@chakra-ui/react'; 
+} from '@chakra-ui/react';
 // import { Link } from "react-router-dom";
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { redirect } from "react-router-dom";
@@ -23,7 +23,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { store } from '../../../Redux/store';
 import { logout } from "../../../Redux/AuthReducer/action.js"
 const Links = [{ name: 'Dashboard', to: "/admin" }, { name: 'Add_Products', to: "/admin_add_product" }, { name: 'User_List', to: "/admin_user_list" }, { name: 'Product_List', to: "/admin_product_list" }];
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({ children }) => (
   <Link
     px={2}
     py={1}
@@ -42,9 +42,7 @@ export default function Admin_Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const user = useSelector((store) => store.AuthReducer.user)
   const handleLogout = () => {
-    
-    redirect("/")
-    // <Navigate to="/" replace={true} />
+    dispatch(logout)
   }
   return (
     <>
@@ -64,7 +62,7 @@ export default function Admin_Navbar() {
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.name}>{link}</NavLink>
               ))}
             </HStack>
           </HStack>
@@ -84,7 +82,7 @@ export default function Admin_Navbar() {
                 />
               </MenuButton>
               <MenuList>
-              <MenuItem>{user.username}</MenuItem>
+                <MenuItem>{user.username}</MenuItem>
                 <Link href="/"> <MenuItem>
                   <Button variant="link">
                     HomePage
@@ -106,7 +104,7 @@ export default function Admin_Navbar() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link.to}>{link}</NavLink>
+                <NavLink key={link.name}>{link}</NavLink>
               ))}
             </Stack>
           </Box>
