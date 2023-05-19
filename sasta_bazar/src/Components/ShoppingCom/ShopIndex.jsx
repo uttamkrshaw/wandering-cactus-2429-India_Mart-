@@ -27,6 +27,7 @@ import MobileAccessoriesCards from "../MobileAccessoriesCards";
 import WomensProductCards from "../WomensProductCards";
 import MensProductCards from "../MensProductCards";
 import CardSkeleton from "../Skeleton";
+import Footer from "../Footer";
 const ShopIndex = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [menCount, setMenCount] = useState(10);
@@ -315,6 +316,7 @@ const ShopIndex = () => {
           </Button>
         </Box>
       </Box>
+      <Footer />
     </>
   );
 };

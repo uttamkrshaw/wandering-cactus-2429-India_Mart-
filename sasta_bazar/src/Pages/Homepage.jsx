@@ -25,9 +25,10 @@ import CardSkeleton from "../Components/Skeleton";
 import MobileAccessoriesCards from "../Components/MobileAccessoriesCards";
 import WomensProductCards from "../Components/WomensProductCards";
 import { store } from "../Redux/store";
+import Footer from "../Components/Footer";
 export const Homepage = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const isAuth = useSelector((store)=>store.AuthReducer.isAuth)
+  const isAuth = useSelector((store) => store.AuthReducer.isAuth)
   const dispatch = useDispatch();
   const { isLoading, isError, mens_data, mobile_data, womens_data } =
     useSelector((store) => store.ProductReducer);
@@ -230,6 +231,7 @@ export const Homepage = () => {
           <FaArrowUp color="#2e3192" _hover={{ color: "#f8f3f3" }} />
         </Button>
       </Box>
+      <Footer/>
     </Box>
   );
 };
