@@ -11,7 +11,7 @@ import axios from "axios";
 export const getMensData = (obj) => (dispatch) => {
   dispatch({ type: GET_DATA_REQUEST });
   axios
-    .get("https://wild-blue-swallow-wig.cyclic.app/products?category=mens", obj)
+    .get("https://india-mart.onrender.com/products?category=mens", obj)
     .then((res) => dispatch({ type: GET_MENS_DATA_SUCESS, payload: res.data }))
     .catch((e) => dispatch({ type: GET_DATA_ERROR }));
 };
@@ -20,7 +20,7 @@ export const getWomensData = (obj) => (dispatch) => {
   dispatch({ type: GET_DATA_REQUEST });
   axios
     .get(
-      "https://wild-blue-swallow-wig.cyclic.app/products?category=womens",
+      "https://india-mart.onrender.com/products?category=womens",
       obj
     )
     .then((res) =>
@@ -33,7 +33,7 @@ export const getMobileData = (obj) => (dispatch) => {
   dispatch({ type: GET_DATA_REQUEST });
   axios
     .get(
-      "https://wild-blue-swallow-wig.cyclic.app/products?category=mobile_accessories",
+      "https://india-mart.onrender.com/products?category=mobile_accessories",
       obj
     )
     .then((res) =>
@@ -47,7 +47,7 @@ export const getAllData = (query) => (dispatch) => {
   dispatch({ type: GET_DATA_REQUEST });
   axios
     .get(
-      `https://wild-blue-swallow-wig.cyclic.app/products?q=${query}&_limit=20`
+      `https://india-mart.onrender.com/products?q=${query}&_limit=20`
     )
     .then((res) => dispatch({ type: GET_ALL_DATA_SUCESS, payload: res.data }))
     .catch((e) => dispatch({ type: GET_DATA_ERROR }));

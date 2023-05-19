@@ -78,8 +78,6 @@ function Navbar() {
                   alt="logo"
                 />
               </Link>
-
-
             </Box>
             <HStack
               as={"nav"}

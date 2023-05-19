@@ -45,14 +45,14 @@ export const gologout = () => {
 
 export const adddata = (payload) =>  (dispatch) => {
     dispatch(postdatarequest())
-   return  axios.post("https://wild-blue-swallow-wig.cyclic.app/userdata", payload)
+   return  axios.post("https://india-mart.onrender.com/userdata", payload)
     .then(() => dispatch(postdatasuccess()))
     .catch(() => dispatch(postdataerror()))
 }
 
 export const getdata = async (dispatch) => {
     dispatch(getdatarequest())
-    await axios.get("https://wild-blue-swallow-wig.cyclic.app/userdata").then((res) => {
+    await axios.get("https://india-mart.onrender.com/userdata").then((res) => {
         dispatch(getdatasuccess(res.data))
     }).catch(() => dispatch(getdataerror()))
 }
