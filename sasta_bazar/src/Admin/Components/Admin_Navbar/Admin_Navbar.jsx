@@ -14,7 +14,7 @@ import {
   useDisclosure,
   useColorModeValue,
   Stack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Center, Image, Heading, Text, Link
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'; 
 // import { Link } from "react-router-dom";
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { useDispatch, useSelector } from 'react-redux';
@@ -80,6 +80,7 @@ export default function Admin_Navbar() {
                 />
               </MenuButton>
               <MenuList>
+              <MenuItem>{user.username}</MenuItem>
                 <Link href="/"> <MenuItem>
                   <Button variant="link">
                     HomePage
@@ -88,7 +89,7 @@ export default function Admin_Navbar() {
                 <MenuItem><BackdropExample /></MenuItem>
                 <MenuDivider />
                 <MenuItem>
-                  <Button variant="link">
+                  <Button onClick={handleLogout} variant="link">
                     Logout
                   </Button>
                 </MenuItem>
