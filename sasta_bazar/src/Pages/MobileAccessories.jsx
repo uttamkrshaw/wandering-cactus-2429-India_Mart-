@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../Components/ShoppingCom/Navbar";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import Footer from "../Components/Footer";
 
 //
 const MobileAccessories = () => {
@@ -170,6 +171,7 @@ const MobileAccessories = () => {
           </Box>
         </Box>
       )}
+      <Footer />
     </Box>
   );
 };

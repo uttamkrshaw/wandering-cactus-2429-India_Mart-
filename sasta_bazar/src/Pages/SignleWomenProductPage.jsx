@@ -18,6 +18,7 @@ import trustScore from "../Images/trustScore.png";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import { postCartData } from "../Redux/CartReducer/action";
 import Navbar from "../Components/ShoppingCom/Navbar";
+import Footer from "../Components/Footer";
 
 const SignleWomenProductPage = () => {
   const { id } = useParams();
@@ -114,6 +115,7 @@ const SignleWomenProductPage = () => {
           <Text color="gray">SKU:UTMF003578</Text>
         </Box>
       </Flex>
+      <Footer />
     </Box>
   );
 };

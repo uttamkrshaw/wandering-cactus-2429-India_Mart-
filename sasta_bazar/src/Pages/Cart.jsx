@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import ProductinCart from "../Components/ProductinCart";
 import { deleteCartData } from "../Redux/CartReducer/action";
 import Navbar from "../Components/ShoppingCom/Navbar";
+import Footer from "../Components/Footer";
 const Cart = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -56,7 +57,6 @@ const Cart = () => {
       </div>
 
       <div>
-
         <Box pr={8} pl={8}>
           <Text ml="40px" fontSize="3xl" as="b">
             My Cart 😊
@@ -100,9 +100,10 @@ const Cart = () => {
             </button>
           </Box>
         </Box>
-
       </div>
-
+<div>
+  <Footer />
+</div>
     </>
   );
 };

@@ -17,6 +17,7 @@ import { GET_PRODUCT } from '../../../Redux/AdminRedux/action';
 import ProductList from './ProductList';
 import Admin_Navbar from '../Admin_Navbar/Admin_Navbar';
 import { Page } from "./Page";
+import Footer from "../../../Components/Footer";
 export const Product = () => {
     const [page, setPage] = useState(1)
     const [total, setTotal] = useState(7)
@@ -42,16 +43,19 @@ export const Product = () => {
                 )}
             </div>
             <div>
-                <Button isDisabled={page===0?true:false} onClick={() => handleChange(-1)}>
+                <Button isDisabled={page === 1 ? true : false} onClick={() => handleChange(-1)}>
                     Prev
                 </Button>
                 <Button>
                     {page}
                 </Button>
-                <Button isDisabled={page===7?true:false} onClick={() => handleChange(+1)}>
+                <Button isDisabled={page === 7 ? true : false} onClick={() => handleChange(+1)}>
                     Next
                 </Button>
-            </div >
-        </div >
+            </div>
+            <div>
+                <Footer />
+            </div>
+        </div>
     )
 }

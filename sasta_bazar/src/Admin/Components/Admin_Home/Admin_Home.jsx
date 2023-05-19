@@ -3,6 +3,7 @@ import Admin_Navbar from '../Admin_Navbar/Admin_Navbar'
 import Chart from "react-apexcharts";
 import { useSelector } from 'react-redux';
 import { Flex } from '@chakra-ui/layout';
+import Footer from '../../../Components/Footer';
 
 
 const Admin_Home = () => {
@@ -72,6 +73,7 @@ const Admin_Home = () => {
           />
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

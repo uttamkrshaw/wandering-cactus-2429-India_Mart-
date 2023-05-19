@@ -12,6 +12,7 @@ import { useState } from 'react'
 import { createProduct } from '../../../Redux/AdminRedux/action'
 import Admin_Navbar from '../Admin_Navbar/Admin_Navbar'
 import "./NewProduct.css"
+import Footer from '../../../Components/Footer'
 
 const initalState = {
     "image": "",
@@ -64,6 +65,9 @@ export const NewProduct = () => {
                         </Button>
                     </FormControl>
                 </form>
+            </div>
+            <div>
+                <Footer />
             </div>
         </>
     )

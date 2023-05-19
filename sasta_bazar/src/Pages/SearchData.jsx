@@ -7,6 +7,7 @@ import { FaArrowUp } from "react-icons/fa";
 import Navbar from "../Components/ShoppingCom/Navbar";
 import { useState } from "react";
 import SearchDataCards from "../Components/SearchDataCards";
+import Footer from "../Components/Footer";
 
 const SearchData = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -100,6 +101,7 @@ const SearchData = () => {
           </Box>
         </Box>
       )}
+      <Footer />
     </Box>
   );
 };

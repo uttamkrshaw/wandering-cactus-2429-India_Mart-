@@ -16,6 +16,7 @@ import { getWomensData } from "../Redux/ProductReducer/action";
 import Navbar from "../Components/ShoppingCom/Navbar";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 import { ChevronRightIcon } from "@chakra-ui/icons";
+import Footer from "../Components/Footer";
 const Womens = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [isVisible, setIsVisible] = useState(false);
@@ -165,6 +166,7 @@ const Womens = () => {
           </Box>
         </Box>
       )}
+      <Footer />
     </Box>
   );
 };

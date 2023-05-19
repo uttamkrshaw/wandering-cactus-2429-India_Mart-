@@ -17,6 +17,7 @@ import trustScore from "../Images/trustScore.png";
 import { postCartData } from "../Redux/CartReducer/action";
 import Navbar from "../Components/ShoppingCom/Navbar";
 import axios from "axios";
+import Footer from "../Components/Footer";
 const SingleAllProductData = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -44,7 +45,6 @@ const SingleAllProductData = () => {
   return (
     <Box>
       <Navbar />
-
       <Flex
         direction={["column", "column", "row"]}
         ml={["20px", "25px", "40px", "100px"]}
@@ -89,6 +89,7 @@ const SingleAllProductData = () => {
           <Text color="gray">SKU:UTMF003578</Text>
         </Box>
       </Flex>
+      <Footer/>
     </Box>
   );
 };

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { GET_USERS } from '../../../Redux/AdminRedux/action'
 import Admin_Navbar from "../Admin_Navbar/Admin_Navbar"
 import Admin_UserCard from "./Admin_UserCard"
+import Footer from "../../../Components/Footer";
 export const Admin_Userlist = () => {
   const dispatch = useDispatch()
   useEffect(() => {
@@ -24,6 +25,9 @@ export const Admin_Userlist = () => {
         </div>
         )
         }
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   )
