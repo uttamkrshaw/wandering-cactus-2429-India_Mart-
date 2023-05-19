@@ -1,28 +1,28 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Homepage } from "./Homepage";
-import Mens from "./Mens";
-import MobileAccessories from "./MobileAccessories";
+import { Homepage } from "../Pages/Homepage";
+import Mens from "../Pages/Mens";
+import MobileAccessories from "../Pages/MobileAccessories";
 
-import ShoppingPage from "./Shopping/ShoppingPage";
+import ShoppingPage from "../Pages/Shopping/ShoppingPage";
 // import SignleProductPage from "./SignleProductPage";
 
-import SignleMenProductPage from "./SignleMenProductPage";
-import SignleWomenProductPage from "./SignleWomenProductPage";
-import SingleMobileAccessoriesProductPage from "./SingleMobileAccessoriesProductPage";
-import Cart from "./Cart";
+import SignleMenProductPage from "../Pages/SignleMenProductPage";
+import SignleWomenProductPage from "../Pages/SignleWomenProductPage";
+import SingleMobileAccessoriesProductPage from "../Pages/SingleMobileAccessoriesProductPage";
+import Cart from "../Pages/Cart";
 import { PrivateRoutes } from "../Components/PrivateRoutes";
-import Womens from "./Womens";
+import Womens from "../Pages/Womens";
 import ShopIndex from "../Components/ShoppingCom/ShopIndex";
-import Payment from "./Payment";
+import Payment from "../Pages/Payment";
 import { NewProduct } from "../Admin/Components/AddProductPage/NewProduct";
 import Admin_Home from "../Admin/Components/Admin_Home/Admin_Home";
 import { Product } from "../Admin/Components/ProductListPage/Product";
-import Login from "./Login";
-import SignUp from "./SignUp";
+import Login from "../Pages/Login";
+import SignUp from "../Pages/SignUp";
 import { Admin_Userlist } from "../Admin/Components/Admin_User_List/Admin_Userlist";
-import SearchData from "./SearchData";
-import SingleAllProductData from "./SingleAllProductData";
+import SearchData from "../Pages/SearchData";
+import SingleAllProductData from "../Pages/SingleAllProductData";
 
 const MainRoutes = () => {
   return (
