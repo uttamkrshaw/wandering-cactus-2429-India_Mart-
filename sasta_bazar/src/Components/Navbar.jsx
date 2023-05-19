@@ -112,13 +112,16 @@ function Navbar() {
                   {user.type === "admin" ?
                     <Link to={"/admin"}>
                       <MenuItem>
-                        Admin Pannel
+                      <Button variant="link">
+                      Admin Pannel
+                      </Button>
+                        
                       </MenuItem>
                     </Link>
                     : null}
                   <MenuDivider />
                   <MenuItem>
-                    <Button onClick={handleLogout}>
+                    <Button variant="link" onClick={handleLogout}>
                       Logout
                     </Button>
                   </MenuItem>
@@ -166,7 +169,7 @@ export const BackdropExample = () => {
 
   return (
     <>
-      <Button onClick={onOpen}>User Details</Button>
+      <Button variant="link" onClick={onOpen}>User Details</Button>
       <Modal
         isCentered
         onClose={onClose}
