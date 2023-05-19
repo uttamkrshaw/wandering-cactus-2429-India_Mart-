@@ -1,41 +1,87 @@
-## Project Title
 
-IndiaMart
-
-### Description
-
-IndiaMart is an e-commerce online website for the best products of all categories for the consumer. User can buy products at best deals and offers.
-
-### This is a collaborative project of 4 members
-
-- Sonu Gupta (Team Lead)
-- uttam kumar shaw
-- Kirpa Shankar Pandey
-- shivam
+# Project Title : India_Mart_Clone
 
 
-### `Project Screenshots`
+IndiaMart is an e-commerce online website for the best products of all categories for the consumer. User can buy products at best deals and offers
 
-- ![Screenshot (260)](https://user-images.githubusercontent.com/112892522/221486632-fa465c01-6249-44dd-a056-7c7234dc673a.png)
+## Authors
 
-### `Tech Stack`
-
-Technologies used in the project:
-
-- React Js
-- Redux
-- Chakra Ui
-- JavaScript
+- [@uttamkrshaw](https://github.com/uttamkrshaw)
+- [@kripaShankarPandey](https://github.com/kripaShankarPandey)
+- [@sonugupta1234](https://github.com/sonugupta1234)
+- [@sp740881](https://github.com/sp740881)
 
 
-### `Features`
+## Screenshots
+## Homepage
 
-- list Menu Items<br/>
-- Tabs Using Chakra ui<br/>
-- Modal Using Chakra ui<br/>
-- Dropdown Menu using Chakra ui<br/>
+![App Screenshot](./sasta_bazar/public/Images/home.png)
 
-### `Project Details`
+## Login Page
 
-. github link- https://github.com/sonugupta1234/wandering-cactus-2429/tree/main/sasta_bazar <br/>
-. live link- https://india-mart-black.vercel.app/
+![App Screenshot](./sasta_bazar/public/Images/login.png)
+
+## Shopping Page
+
+![App Screenshot](./sasta_bazar/public/Images/shopping.png)
+
+
+## Mens Page
+
+![App Screenshot](./sasta_bazar/public/Images/mens.png)
+
+
+## Womens Page
+
+![App Screenshot](./sasta_bazar/public/Images/womens.png)
+
+
+## Cart Page
+
+![App Screenshot](./sasta_bazar/public/Images/cart.png)
+
+
+## Payment Page
+
+![App Screenshot](./sasta_bazar/public/Images/payment.png)
+
+
+## Features
+
+- Light/dark mode toggle
+- Live previews
+- Fullscreen mode
+- Cross platform
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/uttamkrshaw/wandering-cactus-2429
+```
+
+Go to the project directory
+
+```bash
+  cd sasta_bazar
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at uttamkr5599@gmail.com
+
