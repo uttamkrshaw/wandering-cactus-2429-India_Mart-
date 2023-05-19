@@ -13,7 +13,7 @@ import {
   MenuDivider,
   useDisclosure,
   useColorModeValue,
-  Stack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Center, Image, Heading, Text,Link
+  Stack, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, Center, Image, Heading, Text, Link
 } from '@chakra-ui/react';
 // import { Link } from "react-router-dom";
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
@@ -80,10 +80,18 @@ export default function Admin_Navbar() {
                 />
               </MenuButton>
               <MenuList>
-                <Link href="/"> <MenuItem>HomePage</MenuItem></Link>
+                <Link href="/"> <MenuItem>
+                  <Button variant="link">
+                    HomePage
+                  </Button>
+                </MenuItem></Link>
                 <MenuItem><BackdropExample /></MenuItem>
                 <MenuDivider />
-                <MenuItem>Logout</MenuItem>
+                <MenuItem>
+                  <Button variant="link">
+                    Logout
+                  </Button>
+                </MenuItem>
               </MenuList>
             </Menu>
           </Flex>
@@ -112,7 +120,7 @@ export const BackdropExample = () => {
 
   return (
     <>
-      <Button onClick={onOpen}>User Details</Button>
+      <Button variant="link" onClick={onOpen}>User Details</Button>
       <Modal
         isCentered
         onClose={onClose}
