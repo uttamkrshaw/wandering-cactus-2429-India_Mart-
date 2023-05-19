@@ -17,6 +17,8 @@ import {
 } from '@chakra-ui/react'; 
 // import { Link } from "react-router-dom";
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { redirect } from "react-router-dom";
+import { Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { store } from '../../../Redux/store';
 import { logout } from "../../../Redux/AuthReducer/action.js"
@@ -40,7 +42,9 @@ export default function Admin_Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const user = useSelector((store) => store.AuthReducer.user)
   const handleLogout = () => {
-    dispatch(logout)
+    
+    redirect("/")
+    // <Navigate to="/" replace={true} />
   }
   return (
     <>

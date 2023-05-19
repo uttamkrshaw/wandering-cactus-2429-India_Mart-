@@ -48,6 +48,7 @@ function Navbar() {
 
   const handleLogout = () => {
     dispatch(logout)
+    
   }
   useEffect(() => {
 
