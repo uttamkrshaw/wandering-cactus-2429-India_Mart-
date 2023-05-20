@@ -43,11 +43,9 @@ export const gologout = () => {
 }
 
 
-export const adddata = (payload) =>  (dispatch) => {
+export const adddata = (payload) => (dispatch) => {
     dispatch(postdatarequest())
-   return  axios.post("https://india-mart.onrender.com/userdata", payload)
-    .then(() => dispatch(postdatasuccess()))
-    .catch(() => dispatch(postdataerror()))
+    return axios.post("https://india-mart.onrender.com/userdata", payload).then(() => dispatch(postdatasuccess())).catch(() => dispatch(postdataerror()))
 }
 
 export const getdata = async (dispatch) => {
@@ -60,7 +58,7 @@ export const getdata = async (dispatch) => {
 export const authstatus = (payload) => (dispatch) => {
     localStorage.setItem("user", JSON.stringify(payload))
     localStorage.setItem("isAuth", JSON.stringify(true))
- dispatch(getauthstatus(payload))
+    dispatch(getauthstatus(payload))
 }
 
 export const logout = (dispatch) => {

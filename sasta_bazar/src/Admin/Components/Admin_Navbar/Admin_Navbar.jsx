@@ -117,8 +117,6 @@ export default function Admin_Navbar() {
           </Box>
         ) : null}
       </Box>
-
-      {/* <Box p={4}>Main Content Here</Box> */}
     </>
   );
 }
@@ -157,6 +155,10 @@ export const BackdropExample = () => {
 
 export const UserDetails = () => {
   const user = useSelector((store) => store.AuthReducer.user);
+  const userdata = useSelector((store) => store.AuthReducer.userdata);
+
+  console.log("user",user)
+  console.log("userdata",userdata);
   return (
     <Center py={6}>
       <Box
