@@ -55,7 +55,8 @@ const Admin_Home = () => {
       <div>
         <Admin_Navbar />
       </div>
-      <div style={{display:"Flex", gap:"100px"}}>
+      <div style={{display:"Flex",justifyContent:"space-evenly",gap:"100px"}}>
+        <Flex wrap="wrap">
         <div>
           <Chart
             options={state.options}
@@ -72,6 +73,7 @@ const Admin_Home = () => {
             width="500"
           />
         </div>
+        </Flex>
       </div>
       <Footer />
     </div>
