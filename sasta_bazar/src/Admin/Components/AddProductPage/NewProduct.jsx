@@ -25,17 +25,13 @@ const initalState = {
 
 export const NewProduct = () => {
     const [product, setProduct] = useState(initalState)
-    //console.log(product);
     const handleChange = (e) => {
         const { name, value } = e.target;
-        //console.log(e.target.value)
         setProduct((prev) => { return { ...prev, [name]: name === "price" ? +value : value } })
-        //console.log(product)
     }
     const handleSubmit = (e) => {
         e.preventDefault();
         createProduct(product)
-        //console.log(product)
         setProduct(initalState)
     }
     return (
@@ -45,7 +41,7 @@ export const NewProduct = () => {
             </div>
             <div className='form'>
                 <form onSubmit={(e) => handleSubmit(e)}>
-                    <FormControl isRequired>
+                    <FormControl style={{marginTop:"50px"}} isRequired>
                         <FormLabel>Title</FormLabel>
                         <Input type='text' name='title' value={product.title} onChange={(e) => { handleChange(e) }} />
                         <FormLabel>Image Link</FormLabel>
@@ -60,7 +56,7 @@ export const NewProduct = () => {
                             <option value='womens'>Womens</option>
                             <option value='mobile_accessories'>Mobile Accessories</option>
                         </Select>
-                        <Button colorScheme='teal' variant='outline' type='submit'>
+                        <Button style={{marginTop:"30px", marginBottom:"30px"}} colorScheme='teal' variant='outline' type='submit'>
                             Add Products
                         </Button>
                     </FormControl>
