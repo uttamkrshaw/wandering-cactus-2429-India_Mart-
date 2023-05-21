@@ -24,7 +24,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { UPDATE_PRODUCT } from '../../../Redux/AdminRedux/action';
 
-export const Update = ({ id, image, price, title, brands, category }) => {
+export const Update = ({ id, image, price, title, brands, category,val,setVal}) => {
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
     const [_id, setId] = useState(id)
@@ -33,7 +33,6 @@ export const Update = ({ id, image, price, title, brands, category }) => {
     const [_brands, setBrands] = useState(brands)
     const [_category, setCategory] = useState(category)
     const [_price, setPrice] = useState(price)
-    const [val,setVal] = useState(false)
     const { isOpen, onOpen, onClose } = useDisclosure()
     const firstField = React.useRef()
 
@@ -49,6 +48,7 @@ export const Update = ({ id, image, price, title, brands, category }) => {
             category: _category
         }
         dispatch(UPDATE_PRODUCT(data))
+        setVal(!val)
     }
 
     return (
@@ -102,7 +102,7 @@ export const Update = ({ id, image, price, title, brands, category }) => {
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button onClick={handleUpdate} colorScheme='blue' mr={3}>
+                        <Button onClick={handleUpdate,onClose} colorScheme='blue' mr={3}>
                             Update Details
                         </Button>
                         <Button onClick={onClose}>Cancel</Button>

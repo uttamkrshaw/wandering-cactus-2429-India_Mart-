@@ -19,12 +19,13 @@ import Admin_Navbar from '../Admin_Navbar/Admin_Navbar';
 import { Page } from "./Page";
 import Footer from "../../../Components/Footer";
 export const Product = () => {
+    const [val,setVal] = useState(false)
     const [page, setPage] = useState(1)
     const [total, setTotal] = useState(7)
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(GET_PRODUCT(page))
-    }, [page])
+    }, [page,val])
     const { products, isLoading, isError } = useSelector((store) => { return { products: store.AdminReducer.products, isLoading: store.ProductReducer.isLoading, isError: store.ProductReducer.isError } }, shallowEqual)
     console.log("page", page);
     const handleChange = (e) => {
@@ -38,7 +39,7 @@ export const Product = () => {
             <div className="main">
                 {products.length > 0 && products.map((el) =>
                     <div className="card">
-                        <ProductList key={el.id} {...el} />
+                        <ProductList key={el.id} {...el} val={val} setVal={setVal} />
                     </div>
                 )}
             </div>

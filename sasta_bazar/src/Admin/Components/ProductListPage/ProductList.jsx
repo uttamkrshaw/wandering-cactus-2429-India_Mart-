@@ -14,7 +14,7 @@ import { Update } from './Update';
 import Delete from './Delete';
 
 
-export default function ProductList({ image, brands, title, price, category, id }) {
+export default function ProductList({ image, brands, title, price, category, id,val,setVal }) {
     return (
         <Center py={6}>
             <Box
@@ -95,7 +95,7 @@ export default function ProductList({ image, brands, title, price, category, id 
                             bg: 'blue.500',
                         }}
                     >
-                        <Update id={id} price={price} title={title} brands={brands} category={category} image={image} />
+                        <Update id={id} price={price} title={title} brands={brands} category={category} image={image} val={val} setVal={setVal} />
                     </Button>
                     <Button
                         flex={1}
