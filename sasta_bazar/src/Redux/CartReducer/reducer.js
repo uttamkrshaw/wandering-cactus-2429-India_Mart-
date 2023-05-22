@@ -1,4 +1,10 @@
-import {ADD_TO_CART, DELETE_TO_CART, ORDERED_PLACED} from "./actionType";
+import {
+    ADD_TO_CART,
+    DECREASE_QUANTITY,
+    DELETE_TO_CART,
+    INCREASE_QUANTITY,
+    ORDERED_PLACED
+} from "./actionType";
 
 const initialstate = {
     cart: JSON.parse(localStorage.getItem('cart')) || []
@@ -24,6 +30,23 @@ export const reducer = (state = initialstate, {type, payload}) => {
                 ...state,
                 cart: []
             }
+        case INCREASE_QUANTITY:
+            return {
+                ...state,
+                cart: state.cart.map((x) => x.id === payload ? {
+                    ...x,
+                    quantity: x.quantity + 1
+                } : x)
+            }
+        case DECREASE_QUANTITY:
+            return {
+                ...state,
+                cart: state.cart.map((x) => x.id === payload ? {
+                    ...x,
+                    quantity: x.quantity - 1
+                } : x)
+            }
+
         default:
             return state;
     }

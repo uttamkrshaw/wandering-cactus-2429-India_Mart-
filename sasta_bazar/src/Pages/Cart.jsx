@@ -15,7 +15,7 @@ const Cart = () => {
   const cart = useSelector((store) => {
     return store.CartReducer.cart;
   });
-
+ console.log("cart",cart);
   localStorage.setItem("cart", JSON.stringify(cart))
 
   const deletefunc = (id) => {

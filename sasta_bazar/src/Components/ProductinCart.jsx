@@ -3,9 +3,12 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { quantity_decrease, quantity_increase } from "../Redux/CartReducer/action";
 
-const ProductinCart = ({ id, title, image, price, deletefunc, handlecost }) => {
-  const [quantity, setQuantity] = useState(1);
+const ProductinCart = ({ id, title, image, price, quantity, deletefunc, handlecost }) => {
+  const [quan, setQuan] = useState(1);
+  const dispatch = useDispatch()
 
   let newPrice = price;
 
@@ -14,6 +17,16 @@ const ProductinCart = ({ id, title, image, price, deletefunc, handlecost }) => {
   const handledelete = () => {
     return deletefunc(id);
   };
+
+  const handleQIncrease = () => {
+    console.log("increase");
+    dispatch(quantity_increase(id))
+  }
+
+  const handleQDecrease = () => {
+ console.log("decrese");
+    dispatch(quantity_decrease(id))
+  }
 
   useEffect(() => {
     handlecost(sum);
@@ -48,8 +61,9 @@ const ProductinCart = ({ id, title, image, price, deletefunc, handlecost }) => {
                 height: "50px",
                 borderRadius: "10px",
               }}
-              onClick={() => setQuantity((prev) => prev - 1)}
-              disabled={quantity == 0 ? true : false}
+              // onClick={() => setQuan((prev) => prev - 1)}
+              onClick={handleQDecrease}
+              disabled={quan == 0 ? true : false}
             >
               <Text mt="-15px" fontSize="5xl">
                 -
@@ -66,7 +80,8 @@ const ProductinCart = ({ id, title, image, price, deletefunc, handlecost }) => {
                 height: "50px",
                 borderRadius: "10px",
               }}
-              onClick={() => setQuantity((prev) => prev + 1)}
+              // onClick={() => setQuan((prev) => prev + 1)}
+              onClick={handleQIncrease}
             >
               <Text mt="-6px" fontSize="4xl">
                 +
