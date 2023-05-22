@@ -22,7 +22,7 @@ export const orderPlacedSuccess = (payload) => (dispatch) => {
     }
     axios({
         method: 'patch',
-        url: `https://india-mart.onrender.com/userdata/${
+        url: `http://localhost:8000/userdata/${
             payload.id
         }`,
         data: {

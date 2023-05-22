@@ -45,6 +45,22 @@
           "brands": "NOZ2TOZ",
           "price": 1019,
           "category": "mens"
+        },
+        {
+          "id": 5,
+          "image": "https://5.imimg.com/data5/ECOM/Default/2023/1/OZ/BU/TV/70232485/koti-ca026743-f98c-45b3-a752-cce6832061a1-500x500.jpg",
+          "title": "Shining Maroon Partywear Waistcoat Jacket",
+          "brands": "Italian Crown",
+          "price": 1599,
+          "category": "mens"
+        },
+        {
+          "id": 4,
+          "image": "https://5.imimg.com/data5/ECOM/Default/2022/11/CT/OX/AR/144394509/1660914423995-225-55-419dxp6pql-aa500-originnm80prcnt-500x500.jpg",
+          "title": "Bibo Men's Woolen Tweed Bandhgala Nehru Jacket Waistcoat",
+          "brands": "B Raja International",
+          "price": 1600,
+          "category": "mens"
         }
       ],
       "id": 2
@@ -108,14 +124,6 @@
   ],
   "products": [
     {
-      "id": 1,
-      "image": "https://5.imimg.com/data5/ECOM/Default/2022/10/SS/WW/FC/156564966/5c2a1349-2-500x500.jpg",
-      "title": "Be Desi Men White Cotton Beige Butta Regular Fit Kurta",
-      "brands": "Navsari Trends LLP",
-      "price": 6255,
-      "category": "mens"
-    },
-    {
       "id": 4,
       "image": "https://5.imimg.com/data5/ECOM/Default/2022/11/CT/OX/AR/144394509/1660914423995-225-55-419dxp6pql-aa500-originnm80prcnt-500x500.jpg",
       "title": "Bibo Men's Woolen Tweed Bandhgala Nehru Jacket Waistcoat",
@@ -136,7 +144,7 @@
       "image": "https://5.imimg.com/data5/ECOM/Default/2022/7/UG/VL/TB/9187030/trackpants-cliths-100-cotton-navy-blue-solid-sportswear-lower-for-men-4177929732162-500x500.jpg",
       "title": "Cliths 100% Cotton Navy Blue Solid Sportswear Lower For Men",
       "brands": "Madhuram Enterprises",
-      "price": 399,
+      "price": 400,
       "category": "mens"
     },
     {

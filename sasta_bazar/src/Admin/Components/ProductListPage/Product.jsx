@@ -38,8 +38,8 @@ export const Product = () => {
             </div>
             <div className="main">
                 {products.length > 0 && products.map((el) =>
-                    <div className="card">
-                        <ProductList key={el.id} {...el} page={page} handleCon={handleCon} />
+                    <div key={el.id} className="card">
+                        <ProductList  {...el} page={page} handleCon={handleCon} />
                     </div>
                 )}
             </div>
