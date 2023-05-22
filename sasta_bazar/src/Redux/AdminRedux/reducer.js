@@ -1,10 +1,17 @@
-import {GET_PRODUCT_FAILURE, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS, GET_USERS_SUCCESS} from "./actionTypes"
+import {
+    GET_PRODUCT_FAILURE,
+    GET_PRODUCT_REQUEST,
+    GET_PRODUCT_SUCCESS,
+    GET_USERS_SUCCESS,
+    PAGE_RELOAD
+} from "./actionTypes"
 
 const initialState = {
     isLoading: false,
     isError: false,
     products: [],
-    users: []
+    users: [],
+    val: false
 }
 
 export const reducer = (state = initialState, {type, payload}) => {
@@ -31,6 +38,13 @@ export const reducer = (state = initialState, {type, payload}) => {
                 ...state,
                 users: payload
             }
+        case PAGE_RELOAD:
+            console.log("inside reducer page reload", payload);
+            return {
+                ...state,
+                val: payload
+            }
+
         default:
             return state
     }

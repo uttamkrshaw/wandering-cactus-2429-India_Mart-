@@ -21,10 +21,10 @@ import {
 
 import { GrAdd } from 'react-icons/gr';
 import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux';
-import { UPDATE_PRODUCT } from '../../../Redux/AdminRedux/action';
+import { useDispatch, useSelector } from 'react-redux';
+import { GET_PRODUCT, RELOAD, UPDATE_PRODUCT } from '../../../Redux/AdminRedux/action';
 
-export const Update = ({ id, image, price, title, brands, category,val,setVal}) => {
+export const Update = ({ id, image, price, title, brands, category, page ,handleCon}) => {
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
     const [_id, setId] = useState(id)
@@ -48,14 +48,14 @@ export const Update = ({ id, image, price, title, brands, category,val,setVal}) 
             category: _category
         }
         dispatch(UPDATE_PRODUCT(data))
-        setVal(!val)
+        handleCon()
     }
 
     return (
         <>
             <Button flex={1}
                 fontSize={'sm'}
-                rounded={'full'}
+                size="md"
                 bg={'blue.400'}
                 color={'white'}
                 boxShadow={
@@ -102,7 +102,7 @@ export const Update = ({ id, image, price, title, brands, category,val,setVal}) 
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button onClick={handleUpdate,onClose} colorScheme='blue' mr={3}>
+                        <Button onClick={() => { handleUpdate(); onClose(); }} colorScheme='blue' mr={3}>
                             Update Details
                         </Button>
                         <Button onClick={onClose}>Cancel</Button>
@@ -112,83 +112,3 @@ export const Update = ({ id, image, price, title, brands, category,val,setVal}) 
         </>
     )
 }
-
-
-// <Drawer
-// isOpen={isOpen}
-// placement='right'
-// initialFocusRef={firstField}
-// onClose={onClose}
-// >
-// <DrawerOverlay />
-// <DrawerContent>
-//     <DrawerCloseButton />
-//     <DrawerHeader borderBottomWidth='1px'>
-//         Update Product Details
-//     </DrawerHeader>
-
-//     <DrawerBody>
-//         <Stack spacing='24px'>
-//             <Box>
-//                 <FormLabel >Image Link</FormLabel>
-//                 <InputGroup>
-//                     <InputLeftAddon>http://</InputLeftAddon>
-//                     <Input
-//                         value={_image}
-//                         type='url'
-//                         id='url'
-//                         placeholder='Please enter domain'
-//                         onChange={(e) => setImage(e.target.value)}
-//                     />
-//                     <InputRightAddon>.com</InputRightAddon>
-//                 </InputGroup>
-//             </Box>
-//             <Box>
-//                 <FormLabel >Title</FormLabel>
-//                 <Input
-//                     value={_title}
-//                     ref={firstField}
-//                     placeholder='Please enter Product Title'
-//                     onChange={(e) => setTitle(e.target.value)}
-
-//                 />
-//             </Box>
-//             <Box>
-//                 <FormLabel htmlFor='username'>Brands</FormLabel>
-//                 <Input
-//                     value={_brands}
-//                     ref={firstField}
-//                     placeholder='Please enter item Brand'
-//                     onChange={(e) => setBrands(e.target.value)}
-
-//                 />
-//             </Box>
-
-//             <Box>
-//                 <FormLabel >Category</FormLabel>
-//                 <Select defaultValue={category}>
-//                     <option value='mens'>Mens </option>
-//                     <option value='womens'>Womens</option>
-//                     <option value='mobile_accessories'>Mobile Accessories</option>
-//                 </Select>
-//             </Box>
-//             <Box>
-//                 <FormLabel htmlFor='username'>Price</FormLabel>
-//                 <Input
-//                     value={_price}
-//                     ref={firstField}
-//                     placeholder='Please enter item Price'
-//                     onChange={(e) => setPrice(e.target.value)}
-//                 />
-//             </Box>
-//         </Stack>
-//     </DrawerBody>
-
-//     <DrawerFooter borderTopWidth='1px'>
-//         <Button variant='outline' mr={3} onClick={onClose}>
-//             Cancel
-//         </Button>
-//         <Button colorScheme='blue' onClick={handleUpdate}>Submit</Button>
-//     </DrawerFooter>
-// </DrawerContent>
-// </Drawer>

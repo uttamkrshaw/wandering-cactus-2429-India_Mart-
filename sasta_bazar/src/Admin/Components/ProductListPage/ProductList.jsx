@@ -14,9 +14,9 @@ import { Update } from './Update';
 import Delete from './Delete';
 
 
-export default function ProductList({ image, brands, title, price, category, id,val,setVal }) {
+export default function ProductList({ image, brands, title, price, category, id, page, handleCon }) {
     return (
-        <Center py={6}>
+        <Center key={id} py={6}>
             <Box
                 maxW={'320px'}
                 w={'full'}
@@ -78,42 +78,11 @@ export default function ProductList({ image, brands, title, price, category, id,
                     </Badge>
                 </Stack>
 
-                <Stack mt={8} direction={'row'} spacing={4}>
-                    <Button
-                        flex={1}
-                        fontSize={'sm'}
-                        rounded={'full'}
-                        bg={'blue.400'}
-                        color={'white'}
-                        boxShadow={
-                            '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
-                        }
-                        _hover={{
-                            bg: 'blue.500',
-                        }}
-                        _focus={{
-                            bg: 'blue.500',
-                        }}
-                    >
-                        <Update id={id} price={price} title={title} brands={brands} category={category} image={image} val={val} setVal={setVal} />
-                    </Button>
-                    <Button
-                        flex={1}
-                        fontSize={'sm'}
-                        rounded={'full'}
-                        bg={'blue.400'}
-                        color={'white'}
-                        boxShadow={
-                            '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
-                        }
-                        _hover={{
-                            bg: 'blue.500',
-                        }}
-                        _focus={{
-                            bg: 'blue.500',
-                        }}>
-                        <Delete id={id} />
-                    </Button>
+                <Stack mt={8} direction={'row'} spacing={5}>
+
+                    <Update id={id} price={price} title={title} brands={brands} category={category} image={image} page={page} handleCon={handleCon} />
+
+                    <Delete id={id} handleCon={handleCon} />
                 </Stack>
             </Box>
         </Center>
