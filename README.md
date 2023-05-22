@@ -4,6 +4,14 @@
 
 IndiaMart is an e-commerce online website for the best products of all categories for the consumer. User can buy products at best deals and offers
 
+## Demo
+Link : - https://clone-india-mart.netlify.app/
+
+## Demo ID To Explore Admin Pannel 
+Email: uttam@gmail.com  
+Password : 12345
+
+
 ## Authors
 
 - [@uttamkrshaw](https://github.com/uttamkrshaw)
@@ -53,9 +61,9 @@ IndiaMart is an e-commerce online website for the best products of all categorie
 
 ## Features
 
-- Light/dark mode toggle
+- Admin Pannel To Keep Tract of User's
 - Live previews
-- Fullscreen mode
+- User's Details Preview
 - Cross platform
 
 
@@ -84,7 +92,6 @@ Start the server
 ```bash
   npm run start
 ```
-
 
 ## Feedback
 
