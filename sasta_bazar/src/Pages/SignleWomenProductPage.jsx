@@ -40,7 +40,17 @@ const SignleWomenProductPage = () => {
 
   const toast = useToast();
   const handleCartAdd = () => {
-    dispatch(postCartData(data));
+    const product_data={
+      id:data.id,
+      image:data.image,
+      brands:data.brands,
+      category:data.category,
+      price:data.price,
+      title:data.title,
+      quantity:1
+    }
+
+    dispatch(postCartData(product_data));
     toast({
       position: "top",
       title: "Item Added",

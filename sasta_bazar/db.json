@@ -61,6 +61,33 @@
           "brands": "B Raja International",
           "price": 1600,
           "category": "mens"
+        },
+        {
+          "id": 66,
+          "image": "https://5.imimg.com/data5/ECOM/Default/2023/2/QV/XA/AF/3069160/wrks083-1-500x500.jpg",
+          "brands": "R & R Apparels",
+          "category": "womens",
+          "price": 2799,
+          "title": "Purple Hand Embellished Indowestren Kurta With Pants-wrks083",
+          "quantity": 10
+        },
+        {
+          "id": 12,
+          "image": "https://5.imimg.com/data5/ECOM/Default/2023/1/XY/KF/IU/10883763/1-4f4c20ec-6bc5-4f9c-bda1-fb2ef96bce0e-500x500.jpg",
+          "brands": "AKR Industries Private Limited",
+          "category": "mens",
+          "price": 549,
+          "title": "Men Multicolor Printed Baggy Shorts",
+          "quantity": 10
+        },
+        {
+          "id": 154,
+          "image": "https://5.imimg.com/data5/ECOM/Default/2022/11/ID/ID/RQ/68103635/001-5c5018ff-d9a3-4d23-9dc1-bfa3b10b9d27-500x500.jpg",
+          "brands": "Reelay Ecommerce India Private Limited",
+          "category": "mobile_accessories",
+          "price": 1600,
+          "title": "Verilux Stylus Pen For IPad",
+          "quantity": 10
         }
       ],
       "id": 2
@@ -136,7 +163,7 @@
       "image": "https://5.imimg.com/data5/ECOM/Default/2023/1/OZ/BU/TV/70232485/koti-ca026743-f98c-45b3-a752-cce6832061a1-500x500.jpg",
       "title": "Shining Maroon Partywear Waistcoat Jacket",
       "brands": "Italian Crown",
-      "price": 1599,
+      "price": 1600,
       "category": "mens"
     },
     {
