@@ -20,43 +20,46 @@ Password : 12345
 - [@sp740881](https://github.com/sp740881)
 
 
-## Screenshots
+## Screenshots 
+
 ## Homepage
-<img src="https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/2eefa79f-c76f-46eb-9bb7-f9ef99287366" alt="Home" />
+
+<img src="https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/4f4f709c-b856-429b-9f4a-0a5ad8216207" alt="Home" />
 
 
 ## Login Page
 
-![login](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/14495e61-cb13-4775-ab17-8e712252fd29)
+<img src="https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/be34f0bd-e806-49ac-b147-13461fa266b0" alt="Login" />
 
 ## Shopping Page
-
-![shopping](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/894afba9-b840-49f2-bfc8-5787cf1ad6dd)
+<img src="https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/e37d03fa-19c7-4d8c-b19a-66bbd0162de8" alt="Shopping" />
 
 
 ## Mens Page
-![mens](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/ccd43a08-72bb-4a8d-9c34-25e51e961d5c)
+
+<img src="https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/e6e51a05-92d9-43a2-bf82-233ffc84bdca" alt="Mens" />
+
 
 ## Womens Page
 
-![womens](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/4a6db943-7875-4f0f-9a63-7f8727422745)
+<img src="https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/cb03c7c0-40e8-44b8-9ce7-f4fca27cb34e" alt="Womens" />
+
 
 
 ## Cart Page
+<img src="https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/5eb5a4ba-50a7-4d16-a67c-2e8b66572f48" alt="Cart" />
 
-![cart](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/c879bb12-7145-4793-a3d0-a75883f8294b)
 
 ## Payment Page
+<img src="https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/96345309-e3de-4087-b168-271649fbab7a" alt="Payment" />
 
-![payment](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/1c15524d-256b-435f-a273-199291976709)
+
 
 ## User_List Page
-
-![user_list](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/93c840cf-55f5-405a-a04b-b87f335a6470)
+<img src="https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/e25bcc04-f863-45c8-ab75-d8aa2e46be5e" alt="User" />                 
 
 ## Product_List Page
-
-![product_list](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/fec05be7-cc3a-4277-b335-4ebd6d72ea6f)
+<img src="https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/dc807574-e04f-4f8b-a301-72c34707a417" alt="Product" />
 
 
 ## Features
