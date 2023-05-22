@@ -6,30 +6,22 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { quantity_decrease, quantity_increase } from "../Redux/CartReducer/action";
 
-const ProductinCart = ({ id, title, image, price, quantity, deletefunc, handlecost }) => {
-  const [quan, setQuan] = useState(1);
+const ProductinCart = ({ id, title, image, price, quantity, deletefunc,handleCon }) => {
   const dispatch = useDispatch()
-
-  let newPrice = price;
-
-  let sum = quantity * newPrice;
 
   const handledelete = () => {
     return deletefunc(id);
   };
 
   const handleQIncrease = () => {
-    console.log("increase");
     dispatch(quantity_increase(id))
   }
 
   const handleQDecrease = () => {
- console.log("decrese");
     dispatch(quantity_decrease(id))
   }
 
   useEffect(() => {
-    handlecost(sum);
   }, [quantity]);
 
   return (
@@ -61,9 +53,8 @@ const ProductinCart = ({ id, title, image, price, quantity, deletefunc, handleco
                 height: "50px",
                 borderRadius: "10px",
               }}
-              // onClick={() => setQuan((prev) => prev - 1)}
-              onClick={handleQDecrease}
-              disabled={quan == 0 ? true : false}
+              onClick={()=>{handleQDecrease();handleCon()}}
+              disabled={quantity == 0 ? true : false}
             >
               <Text mt="-15px" fontSize="5xl">
                 -
@@ -80,8 +71,7 @@ const ProductinCart = ({ id, title, image, price, quantity, deletefunc, handleco
                 height: "50px",
                 borderRadius: "10px",
               }}
-              // onClick={() => setQuan((prev) => prev + 1)}
-              onClick={handleQIncrease}
+              onClick={()=>{handleQIncrease();handleCon()}}
             >
               <Text mt="-6px" fontSize="4xl">
                 +
@@ -89,7 +79,7 @@ const ProductinCart = ({ id, title, image, price, quantity, deletefunc, handleco
             </button>
           </Flex>
         </Box>
-        <Box onClick={handledelete}>
+        <Box onClick={()=>{handledelete();handleCon()}}>
           <DeleteIcon boxSize={8} color="red" />
         </Box>
       </Flex>

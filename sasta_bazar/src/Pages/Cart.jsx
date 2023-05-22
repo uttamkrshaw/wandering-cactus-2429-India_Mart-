@@ -1,5 +1,5 @@
 import { Box, Button, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -11,11 +11,16 @@ const Cart = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [totalcost, setTotalcost] = useState(0);
-  let newSum = 0;
+  const [con, setCond] = useState(false);
+
+  const handleCon = ()=>{
+    setCond(!con)
+  }
+
   const cart = useSelector((store) => {
     return store.CartReducer.cart;
   });
- console.log("cart",cart);
+
   localStorage.setItem("cart", JSON.stringify(cart))
 
   const deletefunc = (id) => {
@@ -23,11 +28,14 @@ const Cart = () => {
     dispatch(deleteCartData(carthai));
   };
 
-  const handlecost = (sum) => {
-    newSum += sum;
-    setTotalcost(newSum);
-  };
-  // console.log(totalcost, "cost");
+  const handleTotalCost = () => {
+    let cost = 0;
+    cart.map((e) => cost += (e.quantity * e.price))
+    setTotalcost(cost)
+  }
+  useEffect(() => {
+    handleTotalCost()
+  }, [con])
   if (cart.length == 0) {
     return (
       <>
@@ -74,7 +82,7 @@ const Cart = () => {
               key={el.id}
               {...el}
               deletefunc={deletefunc}
-              handlecost={handlecost}
+              handleCon={handleCon}
             />
           ))}
           <hr />
@@ -101,9 +109,9 @@ const Cart = () => {
           </Box>
         </Box>
       </div>
-<div>
-  <Footer />
-</div>
+      <div>
+        <Footer />
+      </div>
     </>
   );
 };
