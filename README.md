@@ -22,7 +22,7 @@ Password : 12345
 
 ## Screenshots
 ## Homepage
-![home](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/2eefa79f-c76f-46eb-9bb7-f9ef99287366)
+<img src="https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/2eefa79f-c76f-46eb-9bb7-f9ef99287366" alt="Home" />
 
 
 ## Login Page
