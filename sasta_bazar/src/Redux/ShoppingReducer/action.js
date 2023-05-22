@@ -8,13 +8,13 @@ import {
 } from "./actionTypes";
 export const getSop_men = (count) => (dispatch) => {
     dispatch({type: FETCH_REQUEST});
-    axios.get(`http://localhost:8000/products?category=mens&_page=1&_limit=${count}`).then((res) => dispatch({type: FETCH_MEN_SUCCESS, payload: res.data})).catch((e) => dispatch({type: FETCH_FAILUE}));
+    axios.get(`https://india-mart.onrender.com/products?category=mens&_page=1&_limit=${count}`).then((res) => dispatch({type: FETCH_MEN_SUCCESS, payload: res.data})).catch((e) => dispatch({type: FETCH_FAILUE}));
 };
 export const getSop_Women = (count) => (dispatch) => {
     dispatch({type: FETCH_REQUEST});
-    axios.get(`http://localhost:8000/products?category=womens&_page=1&_limit=${count}`).then((res) => dispatch({type: FETCH_WOMEN_SUCCESS, payload: res.data})).catch((e) => dispatch({type: FETCH_FAILUE}));
+    axios.get(`https://india-mart.onrender.com/products?category=womens&_page=1&_limit=${count}`).then((res) => dispatch({type: FETCH_WOMEN_SUCCESS, payload: res.data})).catch((e) => dispatch({type: FETCH_FAILUE}));
 };
 export const getSop_Accesories = (count) => (dispatch) => {
     dispatch({type: FETCH_REQUEST});
-    axios.get(`http://localhost:8000/products?category=mobile_accessories&_page=1&_limit=${count}`).then((res) => dispatch({type: FETCH_ACCESORIES_SUCCESS, payload: res.data})).catch((e) => dispatch({type: FETCH_FAILUE}));
+    axios.get(`https://india-mart.onrender.com/products?category=mobile_accessories&_page=1&_limit=${count}`).then((res) => dispatch({type: FETCH_ACCESORIES_SUCCESS, payload: res.data})).catch((e) => dispatch({type: FETCH_FAILUE}));
 };
