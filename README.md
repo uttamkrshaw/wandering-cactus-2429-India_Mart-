@@ -14,16 +14,16 @@ IndiaMart is an e-commerce online website for the best products of all categorie
 
 ## Screenshots
 ## Homepage
+![home](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/2eefa79f-c76f-46eb-9bb7-f9ef99287366)
 
-![App Screenshot](./sasta_bazar/public/Images/home.png)
 
 ## Login Page
 
-![App Screenshot](./sasta_bazar/public/Images/login.png)
+![login](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/14495e61-cb13-4775-ab17-8e712252fd29)
 
 ## Shopping Page
 
-![home](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/6aa8ae78-473b-46f1-8bc8-219384cf0436)
+![shopping](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/894afba9-b840-49f2-bfc8-5787cf1ad6dd)
 
 
 ## Mens Page
@@ -41,17 +41,14 @@ IndiaMart is an e-commerce online website for the best products of all categorie
 ## Payment Page
 
 ![payment](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/1c15524d-256b-435f-a273-199291976709)
-## Login Page
-
-![payment](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/1c15524d-256b-435f-a273-199291976709)
 
 ## User_List Page
 
-![payment](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/1c15524d-256b-435f-a273-199291976709)
+![user_list](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/93c840cf-55f5-405a-a04b-b87f335a6470)
 
 ## Product_List Page
 
-![payment](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/1c15524d-256b-435f-a273-199291976709)
+![product_list](https://github.com/uttamkrshaw/wandering-cactus-2429/assets/95582034/fec05be7-cc3a-4277-b335-4ebd6d72ea6f)
 
 
 ## Features
